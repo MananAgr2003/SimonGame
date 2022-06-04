@@ -49,6 +49,12 @@ function animatePress(currentColour) {
 }
 
 var nm = 0;
+$(document).on('click' , function (event) { 
+    nm++;
+    if (nm == 1) {
+        nextSequence();
+    }
+ });
 
 $(document).keydown(function (event) {
 
@@ -72,7 +78,7 @@ function checkAnswer(currentLevel) {
        
        console.log('fail');
        $('body').addClass('game-over');
-       $('h1').text('Game Over! Press F5 To Play Again');
+       $('h1').text('Game Over! Reload To Play Again');
     }
     
     
